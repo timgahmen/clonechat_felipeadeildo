@@ -3,7 +3,12 @@ from pathlib import Path
 from typing import Any
 
 from pyrogram.client import Client
-from tomllib import load
+
+# from tomllib import load
+# error with tomllib - workaround:
+import pip._vendor.tomli as tomllib
+from pip._vendor.tomli import load
+
 
 SETTINGS_FILE = Path("settings.toml")
 
